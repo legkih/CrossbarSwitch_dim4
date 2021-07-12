@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log main_module_of_Crossbar.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_module_of_Crossbar.tcl
+EAStep vivado -log stimulus_for_Crossbar4.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source stimulus_for_Crossbar4.tcl

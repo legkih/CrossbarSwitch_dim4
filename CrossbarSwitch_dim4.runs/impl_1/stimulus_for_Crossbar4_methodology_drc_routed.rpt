@@ -1,0 +1,70 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Jul 12 18:58:01 2021
+| Host         : Anpanman running 64-bit major release  (build 9200)
+| Command      : report_methodology -file stimulus_for_Crossbar4_methodology_drc_routed.rpt -pb stimulus_for_Crossbar4_methodology_drc_routed.pb -rpx stimulus_for_Crossbar4_methodology_drc_routed.rpx
+| Design       : stimulus_for_Crossbar4
+| Device       : xc7a35ticsg324-1L
+| Speed File   : -1L
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 5
++--------+----------+------------------------------------------+------------+
+| Rule   | Severity | Description                              | Violations |
++--------+----------+------------------------------------------+------------+
+| XDCH-2 | Warning  | Same min and max delay values on IO port | 5          |
++--------+----------+------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 5.000 ns has been defined on port 'hard_reset' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks clk] -min 5.000 [get_ports hard_reset]
+D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc (Line: 12)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'req[0]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] -min 5.000 [get_ports req]
+D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc (Line: 15)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'req[1]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] -min 5.000 [get_ports req]
+D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc (Line: 15)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'req[2]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] -min 5.000 [get_ports req]
+D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc (Line: 15)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same output delay of 5.000 ns has been defined on port 'req[3]' relative to clock clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks clk] -min 5.000 [get_ports req]
+D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc (Line: 15)
+Related violations: <none>
+
+

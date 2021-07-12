@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.runs/synth_1/main_module_of_Crossbar.tcl"
+  variable script "D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.runs/synth_1/stimulus_for_Crossbar4.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticsg324-1L
 
@@ -85,6 +86,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/Crossbar.v
   D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/MUX2.v
   D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/MUX4.v
   D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/RoundRobin_Arbiter.v
@@ -92,7 +94,8 @@ read_verilog -library xil_defaultlib {
   D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/output_arbiter_RR.v
   D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/output_crossbar_procedure.v
   D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/point_of_commutation_for_crossbar.v
-  D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/Crossbar.v
+  D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/shifttter.v
+  D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/sources_1/new/stimulus_TOP_LEVEL.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -103,21 +106,24 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc
+set_property used_in_implementation false [get_files D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.srcs/constrs_1/new/crossbar_constraints.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top main_module_of_Crossbar -part xc7a35ticsg324-1L
+synth_design -top stimulus_for_Crossbar4 -part xc7a35ticsg324-1L
 OPTRACE "synth_design" END { }
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef main_module_of_Crossbar.dcp
+write_checkpoint -force -noxdef stimulus_for_Crossbar4.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file main_module_of_Crossbar_utilization_synth.rpt -pb main_module_of_Crossbar_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file stimulus_for_Crossbar4_utilization_synth.rpt -pb stimulus_for_Crossbar4_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
