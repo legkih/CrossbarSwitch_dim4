@@ -1,6 +1,6 @@
 # CrossbarSwitch_dim4
 
-Arbitration algorithm - Round Robin
+Arbitration algorithm - Round Robin (in scr also can be found Wrapped WaveFront Arbiter - WWFA)
 
 Dimension 4×4 (4  Master Devises and 4 Slave Devices)
 
