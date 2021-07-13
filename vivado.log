@@ -2,36 +2,38 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Jul 13 11:45:19 2021
-# Process ID: 11376
+# Start of session at: Tue Jul 13 12:36:06 2021
+# Process ID: 21340
 # Current directory: D:/HDL/CrossbarSwitch_dim4
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1332 D:\HDL\CrossbarSwitch_dim4\CrossbarSwitch_dim4.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7792 D:\HDL\CrossbarSwitch_dim4\CrossbarSwitch_dim4.xpr
 # Log file: D:/HDL/CrossbarSwitch_dim4/vivado.log
 # Journal file: D:/HDL/CrossbarSwitch_dim4\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.xpr
-Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 1027.785 ; gain = 0.000
-update_compile_order -fileset sources_1
-write_project_tcl d://HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.tcl
-INFO: [Vivado-projutils-8] Tcl script 'CrossbarSwitch_dim4.tcl' generated in output directory 'D:/HDL/CrossbarSwitch_dim4'
+oopen_project D:/HDL/CrossbarSwitch_dim4/CrossbarSwitch_dim4.xprScanning sources...
+FFinished scanning sourcesIINFO: [IP_Flow 19-234] Refreshing IP repositoriesIINFO: [IP_Flow 19-1704] No user IP repositories specifiedINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+oopen_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:11 . Memory (MB): peak = 1028.867 ; gain = 0.000eupdate_compile_order -fileset sources_1
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1094.504 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1763.594 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1763.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1763.594 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
 
-INFO: [Vivado-projutils-15] Please note that by default, the file path for the project source files were set wth respect to the 'origin_dir' variable in the
- generated script. When this script is executed from the output directory, these source files will be referenced with respect to this 'origin_dir' path value.
- In case this script was later moved to a different directory, the 'origin_dir' value must be set manually in the script with the path
- relative to the new output directory to make sure that the source files are referenced correctly from the original project. You can also set the
- 'origin_dir' automatically by setting the 'origin_dir_loc' variable in the tcl shell before sourcing this generated script. The 'origin_dir_loc'
- variable should be set to the path relative to the new output directory. Alternatively, if you are sourcing the script from the Vivado command line,
- then set the origin dir using '-tclargs --origin_dir <path>'. For example, 'vivado -mode tcl -source CrossbarSwitch_dim4.tcl -tclargs --origin_dir ".."
-
-WARNING: [Vivado-projutils-10] Found source(s) that were local or imported into the project. If this project is being source controlled, then
- please ensure that the project source(s) are also part of this source controlled data. The list of these local source(s) can be found in the generated script
- under the header section.
-
+open_run: Time (s): cpu = 00:00:29 ; elapsed = 00:00:23 . Memory (MB): peak = 1877.426 ; gain = 848.559
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 13 11:50:17 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 13 12:38:00 2021...
