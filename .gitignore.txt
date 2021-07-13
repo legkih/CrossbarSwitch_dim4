@@ -1,0 +1,8 @@
+CrossbarSwitch_dim4.cache/**
+CrossbarSwitch_dim4.hbs/**
+CrossbarSwitch_dim4.hw/**
+CrossbarSwitch_dim4.ip_user_files/**
+CrossbarSwitch_dim4.runs/**
+CrossbarSwitch_dim4.sim/**
+CrossbarSwitch_dim4.srcs/**
+CrossbarSwitch_dim4.xps

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1626105343">
   <File Type="PA-TCL" Name="stimulus_for_Crossbar4.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="stimulus_for_Crossbar4_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="stimulus_for_Crossbar4_reports.tcl"/>
   <File Type="RDS-RDS" Name="stimulus_for_Crossbar4.vds"/>
   <File Type="RDS-UTIL" Name="stimulus_for_Crossbar4_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="stimulus_for_Crossbar4_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="stimulus_for_Crossbar4.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="stimulus_for_Crossbar4_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="stimulus_for_Crossbar4_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Crossbar.v">
