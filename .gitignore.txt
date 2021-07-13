@@ -6,3 +6,5 @@ CrossbarSwitch_dim4.runs/**
 CrossbarSwitch_dim4.sim/**
 CrossbarSwitch_dim4.srcs/**
 CrossbarSwitch_dim4.xps
+vivado.jou
+vivado.txt
